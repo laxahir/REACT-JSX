@@ -3,6 +3,7 @@ import './App.css'
 import Counter from './Counter'
 import Spreading from './Spreading'
 import Prop from './Prop'
+import Crud from './Crud'
 
 function App() {
 
@@ -54,6 +55,7 @@ const sum = val+1
           />
     {/* <Counter /> */}
     {/* <Spreading /> */}
+    <Crud />
     </>
   )
 }
