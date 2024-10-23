@@ -4,6 +4,7 @@ import Counter from './Counter'
 import Spreading from './Spreading'
 import Prop from './Prop'
 import Crud from './Crud'
+import Form from '../src/Form'
 
 function App() {
 
@@ -42,7 +43,7 @@ const sum = val+1
 
   return (
     <>
-     PROMP
+     {/* PROMP
     <br />
      <Prop 
            newans={sum}
@@ -52,10 +53,11 @@ const sum = val+1
           props = {val}
           array={arr}
           studentdata={student}
-          />
+          /> */}
     {/* <Counter /> */}
     {/* <Spreading /> */}
-    <Crud />
+    {/* <Crud /> */}
+    <Form />
     </>
   )
 }
