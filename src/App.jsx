@@ -5,6 +5,7 @@ import Spreading from './Spreading'
 import Prop from './Prop'
 import Crud from './Crud'
 import Form from '../src/Form'
+import Comment from './Comment'
 
 function App() {
 
@@ -57,7 +58,8 @@ const sum = val+1
     {/* <Counter /> */}
     {/* <Spreading /> */}
     {/* <Crud /> */}
-    <Form />
+    {/* <Form /> */}
+    <Comment />
     </>
   )
 }
