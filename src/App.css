@@ -2,6 +2,10 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  /* text-align: center; */
+}
+
+.Review {
   text-align: center;
 }
 
@@ -45,12 +49,34 @@
 }
 
 .text {
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
   height: 50px;
-  width: 200px;
+  border: 2px solid rgb(0, 153, 255);
 }
 
 .btn {
   background-color: rgb(40, 135, 245);
+}
+
+.main-box {
+  height: 250px;
+  width: 300px;
+  background-color: black;
+}
+
+.name {
+  width: 90%;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 153, 255);
+}
+
+h4 {
+  color: rgb(0, 119, 255);
+}
+
+.form-label {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+
 }

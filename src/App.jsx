@@ -6,6 +6,7 @@ import Prop from './Prop'
 import Crud from './Crud'
 import Form from '../src/Form'
 import Comment from './Comment'
+import Arrayform from './Arrayform'
 
 function App() {
 
@@ -57,9 +58,10 @@ const sum = val+1
           /> */}
     {/* <Counter /> */}
     {/* <Spreading /> */}
-    {/* <Crud /> */}
+    <Crud />
     {/* <Form /> */}
-    <Comment />
+    {/* <Arrayform /> */}
+    {/* <Comment /> */}
     </>
   )
 }

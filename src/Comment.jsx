@@ -38,17 +38,20 @@ const CommentForm = () => {
 
     return (
         <>
-            <form onSubmit={handleForm}>
+            <form onSubmit={handleForm} className='main-box'>
                 <label>
-                    <h4>Comment Review</h4>
+                    <h4 className='Review'>Comment Review</h4>
                 </label>
+                <label className='form-label'>Your Name</label>
                 <input 
+                    className='name'
                     type="text" 
                     placeholder="Enter Your Name" 
                     value={commentData.username} 
                     onChange={(e) => setCommentData({ ...commentData, username: e.target.value })} 
                 /> 
                 <br /><br />
+                <label className='form-label'>Your Comment</label>
                 <textarea
                     className="text"
                     placeholder="Enter Your Comment Here"
