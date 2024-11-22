@@ -35,7 +35,7 @@ function Crud() {
             pass: "",
             gender: "",
             checked: [],
-            image: "",  
+            // image: "",  
         });
         e.target.reset();
     };
@@ -112,7 +112,7 @@ function Crud() {
                 /> <br /><br />
 
               
-                <div>
+                <d  iv>
                     <label>Gender: </label>
                     <input
                         type="radio"
@@ -135,7 +135,7 @@ function Crud() {
                         checked={input.gender === "other"}
                         onChange={(e) => setInput({ ...input, gender: e.target.value })}
                     /> other
-                </div>
+                </d>
                 <br />
 
                 {/* Checkbox input */}
