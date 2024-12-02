@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "./App.css"
 
 function Crud() {
     const [input, setInput] = useState({
@@ -15,9 +16,11 @@ function Crud() {
         return storeData ? JSON.parse(storeData) : [];
     });
 
+
+
     const [edit, setEdit] = useState(null);
 
-   
+
     const handleForm = (e) => {
         e.preventDefault();
         if (edit !== null) {
@@ -40,14 +43,14 @@ function Crud() {
         e.target.reset();
     };
 
-   
+
     const deleteData = (i) => {
         const updateData = arr.filter((_, index) => index !== i);
         setArr(updateData);
         localStorage.setItem("data", JSON.stringify(updateData));
     };
 
-    
+
     const editData = (i) => {
         setEdit(i);
         setInput(arr[i]);
@@ -65,7 +68,7 @@ function Crud() {
     //     }
     // };
 
-   
+
     const handleCheckboxChange = (e) => {
         // const value = e.target.value;
         // setInput((prevState) => {
@@ -89,6 +92,13 @@ function Crud() {
         localStorage.setItem("data", JSON.stringify(arr));
     }, [arr]);
 
+    const [search, Setsearch] = useState("")
+
+
+    const filterdItem = arr.filter((e) => {
+        return e.name.toLowerCase().includes(search.toLowerCase())
+    })
+
     return (
         <>
             <form onSubmit={handleForm}>
@@ -111,8 +121,8 @@ function Crud() {
                     onChange={(e) => setInput({ ...input, pass: e.target.value })}
                 /> <br /><br />
 
-              
-                <d  iv>
+
+                <div>
                     <label>Gender: </label>
                     <input
                         type="radio"
@@ -135,7 +145,7 @@ function Crud() {
                         checked={input.gender === "other"}
                         onChange={(e) => setInput({ ...input, gender: e.target.value })}
                     /> other
-                </d>
+                </div>
                 <br />
 
                 {/* Checkbox input */}
@@ -168,12 +178,24 @@ function Crud() {
                     accept="image/*"
                     onChange={saveImage}
                 /> */}
-                <br /><br />
+                <br />
 
                 <button>{edit === null ? "Submit" : "Update"}</button>
-            </form>
 
-            {arr.length > 0 &&
+            </form><br />
+
+            {filterdItem.length > 0 &&
+                <input
+                    className='search'
+                    type="text"
+                    placeholder='Search Here...'
+                    value={search}
+                    onChange={(e) => Setsearch(e.target.value)}
+                />
+            }
+            <br /><br />
+
+            {filterdItem.length > 0 &&
                 <table border={1}>
                     <thead>
                         <tr>
@@ -188,7 +210,7 @@ function Crud() {
                         </tr>
                     </thead>
                     <tbody>
-                        {arr.map((ele, i) => (
+                        {filterdItem.map((ele, i) => (
                             <tr key={i}>
                                 <td>{i + 1}</td>
                                 <td>{ele.name}</td>
@@ -196,6 +218,7 @@ function Crud() {
                                 <td>{ele.pass}</td>
                                 <td>{ele.gender}</td>
                                 <td>{ele.checked.join(", ")}</td>
+                                <td>{"no data avelable"}</td>
                                 {/* <td>{ele.image && <img src={ele.image} style={{ width: "50px" }} alt="User" />}</td> */}
                                 <td>
                                     <button onClick={() => editData(i)}>Edit</button>

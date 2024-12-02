@@ -80,3 +80,11 @@ h4 {
   color: #bbbbbb;
 
 }
+
+.search {
+  width: 300px;
+  height: 2vh;
+  border: 2px solid black;
+  font-weight: 900;
+  border-radius: 5px;
+}
