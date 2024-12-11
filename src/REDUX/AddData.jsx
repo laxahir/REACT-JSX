@@ -27,7 +27,7 @@ function AddData() {
     }
 
 
-    
+
     // dispatch(addData(input));
     console.log(input.name, input.email, input.pass);
     setInput({
