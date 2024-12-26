@@ -8,6 +8,10 @@ import Form from '../src/Form'
 import Comment from './Comment'
 import Arrayform from './Arrayform'
 import AddData from './REDUX/AddData'
+import UserApi from './APIS/UserApi'
+import StoreApi from './APIS/StoreApi'
+import DogAPI from './APIS/DogAPI'
+import Apiaxios from './APIS/Apiaxios'
 
 function App() {
 
@@ -63,7 +67,11 @@ function App() {
       {/* <Form /> */}
       {/* <Arrayform /> */}
       {/* <Comment /> */}
-      <AddData />
+      {/* <AddData /> */}
+      {/* <UserApi /> */}
+      {/* <StoreApi /> */}
+      {/* <DogAPI /> */}
+      <Apiaxios />
     </>
   )
 }
