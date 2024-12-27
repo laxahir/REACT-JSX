@@ -12,6 +12,8 @@ import UserApi from './APIS/UserApi'
 import StoreApi from './APIS/StoreApi'
 import DogAPI from './APIS/DogAPI'
 import Apiaxios from './APIS/Apiaxios'
+import FireStore from './FireBase/FireStore'
+import RealTime from './FireBase/RealTime'
 
 function App() {
 
@@ -71,7 +73,10 @@ function App() {
       {/* <UserApi /> */}
       {/* <StoreApi /> */}
       {/* <DogAPI /> */}
-      <Apiaxios />
+      {/* <Apiaxios /> */}
+      <RealTime />
+      {/* <FireStore /> */}
+
     </>
   )
 }
