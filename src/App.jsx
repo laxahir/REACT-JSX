@@ -73,8 +73,8 @@ function App() {
       {/* <UserApi /> */}
       {/* <StoreApi /> */}
       {/* <DogAPI /> */}
-      {/* <Apiaxios /> */}
-      <RealTime />
+      <Apiaxios />
+      {/* <RealTime /> */}
       {/* <FireStore /> */}
 
     </>

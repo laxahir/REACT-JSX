@@ -10,7 +10,7 @@ function Apiaxios() {
         axios.get("https://jsonplaceholder.typicode.com/comments")
             .then((value) => {
                 setArr(value.data);
-                setLoading(false);``
+                setLoading(false);
             })
             .catch((err) => {
                 console.log(err);
